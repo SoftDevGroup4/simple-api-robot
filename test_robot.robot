@@ -3,17 +3,17 @@ Library           RequestsLibrary
 
 *** Test Cases ***
 
-GET /is_even/17
-    ${response}    GET    http://localhost:5000/is_even/17
-    Should Contain    ${response.content.decode('utf-8')}    False
+GET /is_grade/3.7
+    ${response}    GET    http://localhost:5000/is_grade/3.7
+    Should Contain    ${response.content.decode('utf-8')}    1st
 
-GET /is_even/36
-    ${response}    GET    http://localhost:5000/is_even/36
-    Should Contain    ${response.content.decode('utf-8')}    True
+GET /is_grade/3.3
+    ${response}    GET    http://localhost:5000/is_grade/3.3
+    Should Contain    ${response.content.decode('utf-8')}    2nd
 
-GET /is_even/13219
-    ${response}    GET    http://localhost:5000/is_even/13219
-    Should Contain    ${response.content.decode('utf-8')}    False
+GET /is_grade/2.5
+    ${response}    GET    http://localhost:5000/is_grade/2.5
+    Should Contain    ${response.content.decode('utf-8')}    other
 
 *** Keywords ***
 
