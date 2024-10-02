@@ -1,85 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-10-01T18:56:02.189042" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-10-02T09:14:55.598207" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Robot" source="D:\BAITOEY\University\2567\1-2567\SoftDev\CICD Assigment\simple-api-robot\test_robot.robot">
-<test id="s1-t1" name="GET /is_grade/3.7" line="6">
+<test id="s1-t1" name="GET /isodd/1" line="6">
 <kw name="GET" owner="RequestsLibrary">
-<msg time="2024-10-01T18:56:04.327405" level="INFO">GET Request : url=http://localhost:5000/is_grade/3.7 
- path_url=/is_grade/3.7 
+<msg time="2024-10-02T09:14:57.835594" level="INFO">GET Request : url=http://localhost:5000/isodd/1 
+ path_url=/isodd/1 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2024-10-01T18:56:04.327405" level="INFO">GET Response : url=http://localhost:5000/is_grade/3.7 
+<msg time="2024-10-02T09:14:57.835594" level="INFO">GET Response : url=http://localhost:5000/isodd/1 
  status=200, reason=OK 
- headers={'Server': 'Werkzeug/3.0.3 Python/3.12.3', 'Date': 'Tue, 01 Oct 2024 11:56:04 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '3', 'Connection': 'close'} 
- body=1st 
+ headers={'Server': 'Werkzeug/3.0.3 Python/3.12.3', 'Date': 'Wed, 02 Oct 2024 02:14:57 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '4', 'Connection': 'close'} 
+ body=True 
  </msg>
-<msg time="2024-10-01T18:56:04.327405" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-10-02T09:14:57.835594" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
-<arg>http://localhost:5000/is_grade/3.7</arg>
+<arg>http://localhost:5000/isodd/1</arg>
 <doc>Sends a GET request.</doc>
-<status status="PASS" start="2024-10-01T18:56:02.281276" elapsed="2.046129"/>
+<status status="PASS" start="2024-10-02T09:14:55.767525" elapsed="2.068069"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${response.content.decode('utf-8')}</arg>
-<arg>1st</arg>
+<arg>True</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-10-01T18:56:04.328583" elapsed="0.001008"/>
+<status status="PASS" start="2024-10-02T09:14:57.837120" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-10-01T18:56:02.280706" elapsed="2.049408"/>
+<status status="PASS" start="2024-10-02T09:14:55.767017" elapsed="2.071632"/>
 </test>
-<test id="s1-t2" name="GET /is_grade/3.3" line="10">
+<test id="s1-t2" name="GET /isodd/0" line="10">
 <kw name="GET" owner="RequestsLibrary">
-<msg time="2024-10-01T18:56:06.376563" level="INFO">GET Request : url=http://localhost:5000/is_grade/3.3 
- path_url=/is_grade/3.3 
+<msg time="2024-10-02T09:14:59.899378" level="INFO">GET Request : url=http://localhost:5000/isodd/0 
+ path_url=/isodd/0 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2024-10-01T18:56:06.377574" level="INFO">GET Response : url=http://localhost:5000/is_grade/3.3 
+<msg time="2024-10-02T09:14:59.899378" level="INFO">GET Response : url=http://localhost:5000/isodd/0 
  status=200, reason=OK 
- headers={'Server': 'Werkzeug/3.0.3 Python/3.12.3', 'Date': 'Tue, 01 Oct 2024 11:56:06 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '3', 'Connection': 'close'} 
- body=2nd 
+ headers={'Server': 'Werkzeug/3.0.3 Python/3.12.3', 'Date': 'Wed, 02 Oct 2024 02:14:59 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '5', 'Connection': 'close'} 
+ body=False 
  </msg>
-<msg time="2024-10-01T18:56:06.377574" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-10-02T09:14:59.899378" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
-<arg>http://localhost:5000/is_grade/3.3</arg>
+<arg>http://localhost:5000/isodd/0</arg>
 <doc>Sends a GET request.</doc>
-<status status="PASS" start="2024-10-01T18:56:04.331120" elapsed="2.046454"/>
+<status status="PASS" start="2024-10-02T09:14:57.840180" elapsed="2.059198"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${response.content.decode('utf-8')}</arg>
-<arg>2nd</arg>
+<arg>False</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-10-01T18:56:06.378230" elapsed="0.000563"/>
+<status status="PASS" start="2024-10-02T09:14:59.900387" elapsed="0.000509"/>
 </kw>
-<status status="PASS" start="2024-10-01T18:56:04.330114" elapsed="2.049629"/>
+<status status="PASS" start="2024-10-02T09:14:57.840180" elapsed="2.061725"/>
 </test>
-<test id="s1-t3" name="GET /is_grade/2.5" line="14">
+<test id="s1-t3" name="GET /isodd/-2" line="14">
 <kw name="GET" owner="RequestsLibrary">
-<msg time="2024-10-01T18:56:08.421458" level="INFO">GET Request : url=http://localhost:5000/is_grade/2.5 
- path_url=/is_grade/2.5 
+<msg time="2024-10-02T09:15:01.930543" level="INFO">GET Request : url=http://localhost:5000/isodd/-2 
+ path_url=/isodd/-2 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2024-10-01T18:56:08.421458" level="INFO">GET Response : url=http://localhost:5000/is_grade/2.5 
+<msg time="2024-10-02T09:15:01.931055" level="INFO">GET Response : url=http://localhost:5000/isodd/-2 
  status=200, reason=OK 
- headers={'Server': 'Werkzeug/3.0.3 Python/3.12.3', 'Date': 'Tue, 01 Oct 2024 11:56:08 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '5', 'Connection': 'close'} 
- body=other 
+ headers={'Server': 'Werkzeug/3.0.3 Python/3.12.3', 'Date': 'Wed, 02 Oct 2024 02:15:01 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '5', 'Connection': 'close'} 
+ body=False 
  </msg>
-<msg time="2024-10-01T18:56:08.421458" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-10-02T09:15:01.931055" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
-<arg>http://localhost:5000/is_grade/2.5</arg>
+<arg>http://localhost:5000/isodd/-2</arg>
 <doc>Sends a GET request.</doc>
-<status status="PASS" start="2024-10-01T18:56:06.381765" elapsed="2.039693"/>
+<status status="PASS" start="2024-10-02T09:14:59.903419" elapsed="2.027636"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${response.content.decode('utf-8')}</arg>
-<arg>other</arg>
+<arg>False</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2024-10-01T18:56:08.421458" elapsed="0.001006"/>
+<status status="PASS" start="2024-10-02T09:15:01.931055" elapsed="0.001005"/>
 </kw>
-<status status="PASS" start="2024-10-01T18:56:06.381259" elapsed="2.041710"/>
+<status status="PASS" start="2024-10-02T09:14:59.902411" elapsed="2.030154"/>
 </test>
-<status status="PASS" start="2024-10-01T18:56:02.190586" elapsed="6.233898"/>
+<status status="PASS" start="2024-10-02T09:14:55.599723" elapsed="6.332842"/>
 </suite>
 <statistics>
 <total>
@@ -92,6 +92,6 @@
 </suite>
 </statistics>
 <errors>
-<msg time="2024-10-01T18:56:02.185562" level="WARN">Error in file 'D:\BAITOEY\University\2567\1-2567\SoftDev\CICD Assigment\simple-api-robot\test_robot.robot' on line 23: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-02T09:14:55.591100" level="WARN">Error in file 'D:\BAITOEY\University\2567\1-2567\SoftDev\CICD Assigment\simple-api-robot\test_robot.robot' on line 23: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 </errors>
 </robot>

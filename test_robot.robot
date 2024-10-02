@@ -3,17 +3,17 @@ Library           RequestsLibrary
 
 *** Test Cases ***
 
-GET /is_grade/3.7
-    ${response}    GET    http://localhost:5000/is_grade/3.7
-    Should Contain    ${response.content.decode('utf-8')}    1st
+GET /isodd/1
+    ${response}    GET    http://localhost:5000/isodd/1
+    Should Contain    ${response.content.decode('utf-8')}    True
 
-GET /is_grade/3.3
-    ${response}    GET    http://localhost:5000/is_grade/3.3
-    Should Contain    ${response.content.decode('utf-8')}    2nd
+GET /isodd/0
+    ${response}    GET    http://localhost:5000/isodd/0
+    Should Contain    ${response.content.decode('utf-8')}    False
 
-GET /is_grade/2.5
-    ${response}    GET    http://localhost:5000/is_grade/2.5
-    Should Contain    ${response.content.decode('utf-8')}    other
+GET /isodd/-2
+    ${response}    GET    http://localhost:5000/isodd/-2
+    Should Contain    ${response.content.decode('utf-8')}    False
 
 *** Keywords ***
 
